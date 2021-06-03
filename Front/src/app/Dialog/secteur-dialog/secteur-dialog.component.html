@@ -1,0 +1,20 @@
+<h2 class="title">Modifier votre mot de passe</h2>
+
+<mat-dialog-content>
+  
+    <mat-form-field  class="secteur" >
+        <mat-select placeholder="Secteurs de travail" [(value)]="selectedSecteur" >
+            <mat-option  *ngFor="let secteur of secteurs" [value]="secteur.value" class="select">
+              {{secteur.value}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <p *ngIf="submitClicked && !secteurValid">entrer votre nouveau numéro de téléphone</p>
+
+    <div>
+        <button (click)="annuler()" class="btn btn-danger">Annuler</button>
+        <button (click)="onSubmit()" class="btn btn-success">Confirmer</button>
+    </div>
+ 
+</mat-dialog-content>
+

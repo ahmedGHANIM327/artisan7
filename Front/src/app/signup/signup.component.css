@@ -1,0 +1,149 @@
+.mat-tab
+{
+    border-bottom: none;
+    margin-bottom: 12px;
+}
+
+.name
+{
+    margin-top: 25px;
+}
+
+/*div1*/
+.div1
+{
+    height: 85vh;
+    background-color: #59CCE2;
+    text-align: center;
+    height: auto;
+}
+
+.div1 h4
+{
+    font-family: 'Rufina';
+    color: #303DB7;
+    margin-top: 27px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.div1 h1
+{
+    font-family: 'Skranji', cursive;
+    color: #FFF;
+    font-size: 60px;
+    margin-bottom: 17px;
+}
+
+@media (max-width: 900px) {
+    .div1 img
+    {
+        display: none;
+    }
+
+    .div1
+    {
+        height: fit-content;
+    }
+
+    .div2
+    {
+        height: fit-content;
+    }
+}
+
+/* div2 */
+.div2
+{
+    padding: 5%;
+    padding-left: 9%;
+    text-align: center;
+    height: fit-content;
+}
+
+.content
+{
+    padding: 0 10%;
+}
+:host ::ng-deep .mat-tab-label
+{
+    font-family: 'Rufina';
+    color: #303DB7;
+    font-weight: bold;
+    margin-right: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+:host ::ng-deep .mat-tab-label-active
+{
+    color: #303DB7;
+    /*border-bottom: #303DB7 solid 4px;*/
+    font-weight: bold;
+    font-size: large;
+}
+
+input
+{
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    border: #59CCE2 solid 5px;
+    text-align: center;
+    height: 40px;
+    width: 310px;
+}
+
+button
+{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #303DB7;
+    margin-bottom: 5px;
+}
+
+.div2 a
+{
+    margin-top: 30px;
+    color: #59CCE2;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.check
+{
+    color: #59CCE2;
+    font-weight: bold; 
+}
+
+.secteur
+{
+
+    width: 310px;
+    margin: 5px auto 30px auto;
+    color: #303DB7;
+    font-weight: bold;
+    font-size: 18px;
+    height: 40px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.select{
+    color: #303DB7;
+}
+
+
+
+/* footer */
+footer
+{
+    padding: 45px;
+    color: #FFF;
+    background-color: #0C0F21;
+    text-align: center;
+    font-family: 'Rufina', serif;
+    font-size: 15px;
+    height: fit-content;
+
+}

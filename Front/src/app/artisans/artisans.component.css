@@ -1,0 +1,60 @@
+  .cardd {
+    width: 250px;
+    height : 580px;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    margin:15px 20px;
+  }
+  
+  .example-header-image {
+
+  }
+
+  mat-card-title
+  {
+    color: #303DB7;
+    font-family: 'Krona One', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  mat-card-subtitle
+  {
+    color: #303DB7;
+  }
+
+  mat-card-header
+  {
+      margin-bottom: 5px;
+  }
+  mat-card-content
+  {
+      color : #59CCE2;
+  }
+
+  .biographie{
+      font-style: italic;
+      font-family: 'Pacifico', cursive;
+      font-weight: bold;
+  }
+
+  .adresse
+  {
+      font-weight: bold;
+  }
+
+  .adresse mat-icon
+  {
+    font-size: 15px;
+  }
+
+  .actions
+  {
+      position: absolute;
+      bottom: 5px;
+      display: flex;
+      color: #303DB7;
+      left: 50px;
+  }
+

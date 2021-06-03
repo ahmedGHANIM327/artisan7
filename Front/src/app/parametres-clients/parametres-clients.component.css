@@ -1,0 +1,44 @@
+.parametre
+{
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.title
+{
+    margin: 25px auto;
+    font-size: 30px;
+    color: #303DB7;
+    font-family: 'Krona One', sans-serif;
+    font-weight: bold;
+    margin-bottom: 45px;
+    width: fit-content;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #303DB7;
+}
+
+button
+{
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    text-align: center;
+    width: 430px;
+    border-radius: 10px;
+}
+
+button:hover
+{
+    background-color: #FFF;
+    color: #303DB7;
+    border: #303DB7 3px solid;
+}
+
+#suppr:hover
+{
+    background-color: #FFF;
+    color: #F44336;
+    border: #F44336 3px solid;
+}

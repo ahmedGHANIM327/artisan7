@@ -1,0 +1,22 @@
+<h2 class="title">Modifier votre adresse</h2>
+
+<mat-dialog-content>
+  
+    <form [formGroup]="adresseEdit" (ngSubmit)="onSubmit()">
+        <input type="text" class="form-control" id="adresse" placeholder="Adresse" formControlName="adresse">
+        <p *ngIf="submitClicked && !adresseValid">entrer votre adresse</p>
+        <div class="row">
+            <div>
+                <input type="text" class="form-control" id="codePostal" placeholder="code postal" formControlName="codePostal">
+                <p *ngIf="submitClicked && !codePostalValid">entrer votre code postal</p>
+            </div>
+            <div>
+                <input type="text" class="form-control" id="ville" placeholder="ville" formControlName="ville">
+                <p *ngIf="submitClicked && !villeValid">entrer votre ville</p>
+            </div>
+        </div>
+        <button (click)="annuler()" class="btn btn-danger">Annuler</button>
+            <button type="submit" class="btn btn-success">Confirmer</button>
+    </form>
+ 
+</mat-dialog-content>

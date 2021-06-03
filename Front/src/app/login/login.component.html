@@ -1,0 +1,31 @@
+<div class="container-fluid principale" style="background-color: #59CCE2;text-align: center;">
+    <div class="container-fluid title">
+        <h1 >Artisan7</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-2 div1" >
+            <img src="././assets/pics/9.png" alt="Blueprint Wire illustration">
+        </div>
+        <div class="col-md-10 div2" >
+            <img src="././assets/pics/login.png" alt="Blueprint Wire illustration">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" formControlName="email">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" formControlName="motDePasse">
+                </div>
+                <button type="submit" class="btn btn-primary">Se connecter</button><br>
+                <a routerLink="/signUp">S'inscrire</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<footer >
+    <div class="container-fluid">
+      <p >Nous contacter</p>
+      <p >© Copyright Artisant7.com</p>
+    </div>
+</footer>
