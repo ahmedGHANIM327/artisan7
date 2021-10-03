@@ -1,0 +1,103 @@
+body
+{
+    width: 2000px;
+    height: 700px;
+    padding: 50px 100px;
+    box-shadow: 200px 200px 200px #000;
+    text-align: center;
+}
+
+.title
+{
+    margin: 15px auto;
+    font-size: 20px;
+    color: #303DB7;
+    font-family: 'Krona One', sans-serif;
+    font-weight: bold;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.content
+{
+    padding: 0 10%;
+    text-align: center;
+}
+:host ::ng-deep .mat-tab-label
+{
+    font-family: 'Rufina';
+    color: #303DB7;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+:host ::ng-deep .mat-tab-label-active
+{
+    color: #303DB7;
+    /*border-bottom: #303DB7 solid 4px;*/
+    font-weight: bold;
+    font-size: large;
+}
+
+.form-control
+{
+    margin: 30px auto 25px auto;
+    border-radius: 20px;
+    border: #59CCE2 solid 5px;
+    text-align: center;
+    width: 350px;
+}
+
+img
+{
+    margin-bottom: 20px;
+}
+
+p
+{
+   color: red; 
+   font-weight: bold;
+   font-style: italic;
+}
+
+button
+{
+    margin: 20px 10px;
+    text-align: center;
+}
+
+/* lister project*/
+table
+{
+    width: 100%;
+    margin-top: 15px;
+}
+
+th
+{
+    color: #59CCE2;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Krona One', sans-serif;
+    margin: 10px auto;
+}
+
+td
+{
+    color: #303DB7;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+td button
+{
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: #FFF;
+    border-radius: 5px;
+}

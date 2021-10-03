@@ -1,0 +1,15 @@
+<h2 class="title">Modifier votre biographie</h2>
+
+<mat-dialog-content>
+  
+    <form [formGroup]="biographieEdit" (ngSubmit)="onSubmit()">
+        <textarea id="content" name="content" rows="8" cols="50" maxlength="1000" formControlName="content" autofocus>
+        </textarea>
+        <p>{{biographieEdit.value.content.length}}/1000</p>
+        <div>
+            <button (click)="annuler()" class="btn btn-danger">Annuler</button>
+            <button type="submit" class="btn btn-success">Confirmer</button>
+        </div>
+    </form>
+ 
+</mat-dialog-content>

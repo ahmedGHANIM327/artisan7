@@ -1,0 +1,47 @@
+body
+{
+    width: 1000px;
+    height: 1000px;
+    padding: 50px;
+    box-shadow: 200px 200px 200px #000;
+    text-align: center;
+}
+
+.title
+{
+    margin: 15px auto;
+    font-size: 20px;
+    color: #303DB7;
+    font-family: 'Krona One', sans-serif;
+    font-weight: bold;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+
+input
+{
+    margin: 20px auto 0px auto;
+    border-radius: 20px;
+    border: #59CCE2 solid 5px;
+    text-align: center;
+    width: 350px;
+}
+
+p
+{
+   color: red; 
+   font-weight: bold;
+   font-style: italic;
+}
+
+button
+{
+    margin: 20px 10px;
+    text-align: center;
+}
+
+mat-dialog-content
+{
+    text-align: center;
+}

@@ -1,0 +1,129 @@
+<mat-tab-group mat-align-tabs="end">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        En cours
+      </ng-template>
+      <div class="cards-holder">
+        <div *ngFor="let demande of demandeEncours" class="card mb-3 stretched-link" (click)="openDialog(demande)">
+          <div class="row">
+            <div class="col-md-2 image" style="text-align: center;">
+              <!-- <img class="img-demand img-fluid" src={{demandes[0].Photo}} alt="..."> -->
+              <img class="img-demand img-fluid" [src]="demande.photo" alt="...">
+            </div>
+            <div class="col-md-8 w-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{demande.titre}}
+                  <span style="color: lightgreen; font-size: large;"><i class="fas fa-circle"></i>
+                  </span>
+                </h5>
+                <p class="card-text w-100">
+                  <i class="fas fa-tools"></i>
+                  {{demande.secteur}}
+                </p>
+                <p class="card-text w-100">
+                  <i class="fas fa-calendar"></i>
+                  {{demande.date_realisation}}
+                </p>
+                <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Historique
+      </ng-template>
+      <div class="cards-holder">
+        <div *ngFor="let demande of demandeFinis" class="card mb-3 px-5 stretched-link" (click)="openDialog(demande)">
+          <div class="row">
+            <div class="col-md-2 image">
+              <img class="img-demand img-fluid" [src]="demande.photo" alt="...">
+            </div>
+            <div class="col-md-8 w-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{demande.titre}}
+                  <span style="color: lightgreen; font-size: large;"><i class="fas fa-check"></i>
+                  </span>
+                </h5>
+                <p class="card-text w-100">
+                  <i class="fas fa-tools"></i>
+                  {{demande.secteur}}
+                </p>
+                <p class="card-text w-100">
+                  <i class="fas fa-calendar"></i>
+                  {{demande.date_creation}}
+                </p>
+                <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Nouvelle demande
+      </ng-template>
+  
+      <form (ngSubmit)="newDemande()" class="new-demand-form d-flex flex-column justify-content-center align-items-center" style="margin-top: 3rem;" >
+          <div class="row container-fluid" style="text-align: center;">
+            <div class="col-md-6">
+              <div>
+                <div style="width: 100%;">
+                  <mat-form-field class="w-50">
+                    <mat-label>Titre</mat-label>
+                    <input matInput name="titre" [(ngModel)]="newdemande.titre" [ngModelOptions]="{standalone: true}">
+                  </mat-form-field>
+                </div>
+                <div style="width: 500px;">
+                  <mat-form-field class="w-25">
+                    <mat-label>Secteur</mat-label>
+                    <mat-select [(ngModel)]="newdemande.secteur" [ngModelOptions]="{standalone: true}">
+                      <mat-option  *ngFor="let secteur of secteurs" [value]="secteur.value">
+                        {{secteur.value}}
+                      </mat-option>
+                  </mat-select>
+                  </mat-form-field>
+                </div>
+                <div style="width: 500px;">
+                  <mat-form-field class="w-25" appearance="fill" >
+                    <mat-label>Date de realisation</mat-label>
+                    <input matInput [matDatepicker]="picker" name="date_realisation" [(ngModel)]="newdemande.date_realisation" [ngModelOptions]="{standalone: true}">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="img">
+                <img src={{url}} style="margin-bottom: 15px;">
+                <input type="file" (change)="uplode($event)" accept="*.png.jpg.jpeg" id="">
+              </div>
+            </div>
+
+          </div>
+  
+          <mat-form-field class="w-75">
+            <mat-label>Adresse</mat-label>
+            <input matInput name="adresse" [(ngModel)]="newdemande.adresse" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+  
+          <mat-form-field class="w-75">
+            <mat-label>Description</mat-label>
+            <input matInput #description maxlength="100" name="description" [(ngModel)]="newdemande.description" [ngModelOptions]="{standalone: true}">
+            <mat-hint align="end">{{description.value.length}} / 100</mat-hint>
+          </mat-form-field>
+  
+        <button class="button-add-demande" type="submit" >Ajouter demande</button>
+  
+  
+      </form>
+    </mat-tab>
+  </mat-tab-group>
